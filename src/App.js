@@ -84,7 +84,7 @@ function App() {
   let walkingRef = useRef(null)
   let childplayingRef = useRef(null)
 
-  let childplayingAnimation = useWebAnimation({
+  useWebAnimation({
     ref: childplayingRef,
     keyframes: [
       { transform: "translate(65%)" },
@@ -97,7 +97,7 @@ function App() {
     }
   })
 
-  let walkingAnimation = useWebAnimation({
+  useWebAnimation({
     ref: walkingRef,
     keyframes: [
       { transform: "translate(100%)" },
@@ -110,7 +110,7 @@ function App() {
     }
   }) 
 
-  let cloudAnimation = useWebAnimation({
+  useWebAnimation({
     ref: cloudRef,
     keyframes: [
       { transform: "translate(40%)" },
@@ -123,7 +123,7 @@ function App() {
     }
   })
 
-  let runningAnimation = useWebAnimation({
+  useWebAnimation({
     ref: runningRef,
     keyframes: [
       { transform: "translate(100%)",},
@@ -136,34 +136,32 @@ function App() {
     },
   })
 
-  console.log(cloudAnimation.playState)
-
   return (
     <div style={styles.wrapper}>
       <div style={styles.skyStyle}>
-        <img src="https://www.animatedimages.org/data/media/230/animated-bird-image-0415.gif" style={styles.birdsStyle}/>
-        <img src={sky} width="170%" height="900px"/>
+        <img src="https://www.animatedimages.org/data/media/230/animated-bird-image-0415.gif" alt="sun and birds" style={styles.birdsStyle}/>
+        <img src={sky} alt="sky" width="170%" height="900px"/>
       </div>
       <div style={styles.cloudsStyle} ref={cloudRef}>
-        <img src={cloud3} width="300px" height="300px" style={styles.cloud3Style}/>
-        <img src={cloud3} width="300px" height="400px" style={styles.cloud3Style1}/>
-        <img src={cloud3} width="450px" height="300px" style={styles.cloud3Style2}/>
+        <img src={cloud3} width="300px" alt="cloud" height="300px" style={styles.cloud3Style}/>
+        <img src={cloud3} width="300px" alt="cloud" height="400px" style={styles.cloud3Style1}/>
+        <img src={cloud3} width="450px" alt="cloud" height="300px" style={styles.cloud3Style2}/>
       </div>
       <div style={styles.grassStyle}>
-        <img src={grass} width="100%" height="100px"/>
+        <img src={grass} alt="grass" width="100%" height="100px"/>
       </div>
       <div style={styles.treeStyle} ref={runningRef}>
-        <img src={tree1} width="300px" height="400px" style={{ }}/>
+        <img src={tree1} alt="tree" width="300px" height="400px" style={{ }}/>
       </div>
       <div style={styles.walkStyle} ref={walkingRef}>
-        <img src="https://www.animatedimages.org/data/media/1635/animated-walking-image-0055.gif" width="60px" height="150px"/>
+        <img src="https://www.animatedimages.org/data/media/1635/animated-walking-image-0055.gif" alt="walk" width="60px" height="150px"/>
       </div>
       <div style={styles.childStyle} ref={childplayingRef}>
-        <img src="https://www.animatedimages.org/data/media/545/animated-child-image-0220.gif" width="70px" height="170px"/>
+        <img src="https://www.animatedimages.org/data/media/545/animated-child-image-0220.gif" alt="childplaying" width="70px" height="170px"/>
       </div>
 
     <div style={styles.runStyle}>
-      <a  href="https://www.animatedimages.org/cat-running-169.htm"><img src="https://www.animatedimages.org/data/media/169/animated-running-image-0008.gif" border="0" alt="animated-running-image-0008"  width="150px" height="250px"/></a>
+      <a  href="https://www.animatedimages.org/cat-running-169.htm"><img src="https://www.animatedimages.org/data/media/169/animated-running-image-0008.gif" border="0" alt="running"  width="150px" height="250px"/></a>
     </div>
     </div>
   )}
