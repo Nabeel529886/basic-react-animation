@@ -136,6 +136,8 @@ function App() {
     },
   })
 
+  console.log(cloudAnimation.playState)
+
   return (
     <div style={styles.wrapper}>
       <div style={styles.skyStyle}>
